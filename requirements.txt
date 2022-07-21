@@ -3,4 +3,4 @@ asyncio==3.4.3
 config==0.5.1
 os==1.7.3
 random==3.7.4
-sqlite=2.22
+sqlite==2.22
