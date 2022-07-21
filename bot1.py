@@ -1,7 +1,5 @@
 import sqlite3
 import asyncio
-import random
-import os
 import config
 from random import choice
 from aiogram import Bot, types
@@ -168,15 +166,6 @@ async def process_start_command(message: types.Message):
     username = message.from_user.username
     db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
-@dp.message_handler(commands=['photo'])
-async def process_start_command(message: types.Message):
-    photo = open('C:/Users/ок/AppData/Local/Programs/Python/Python38/MY PROJECT BOT/photos/photo_2022-04-25_13-11-27.jpg', 'rb')
-    await bot.send_photo(message.from_user.id, photo, "Отправляю вам узбекского кота")
-    await bot.send_message(1451152953, f'Пользователь @{message.from_user.username} c ником: {message.from_user.first_name} написал в бота это: {message.text}')
-    await bot.send_message(-1001674185918, f'Пользователь @{message.from_user.username} c ником: {message.from_user.first_name} написал в бота это: {message.text}')
-    await asyncio.sleep(10)
-    await bot.send_message(message.from_user.id, "Сообщение отрпавилось ровно через 10 секунд")
-  
 @dp.message_handler(text=['Главное меню'])
 async def process_start_command(message: types.Message):
     await message.reply("Жми на кнопки ниже", reply_markup=markup5)
@@ -191,81 +180,6 @@ async def process_start_command(message: types.Message):
 
 admin_id = 1451152953, 1753180282
 owner_id = 1451152953
-
-@dp.message_handler(user_id=admin_id, text=['Тык'])
-async def process_start_command(message: types.Message):
-    photo = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo1 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo2 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo3 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo4 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo5 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo6 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo7 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo8 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo9 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo10 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo11 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo12 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo13 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo14 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo15 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo16 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo17 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo18 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo19 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo20 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo21 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo22 = open('loli/' + random.choice(os.listdir('loli')), 'rb')
-    photo23 = open('loli/' + random.choice(os.listdir('loli')), 'rb')    
-    await bot.send_photo(-1001633496227, photo, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo1, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo2, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo3, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo4, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo5, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo6, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo7, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo8, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo9, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo10, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo11, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo12, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo13, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo14, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo15, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo16, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo17, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo18, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo19, caption='#loli')
-    await asyncio.sleep(40)
-    await bot.send_photo(-1001633496227, photo20, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo21, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo22, caption='#loli')
-    await asyncio.sleep(1)
-    await bot.send_photo(-1001633496227, photo23, caption='#loli')
-    await asyncio.sleep(1)
 
 @dp.message_handler(user_id=admin_id, text=['Админ-панель'])
 async def process_admin(message: types.Message):
