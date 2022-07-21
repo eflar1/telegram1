@@ -1,1 +1,1 @@
-web: python bot1.py
+echo "web: python bot1.py" 
